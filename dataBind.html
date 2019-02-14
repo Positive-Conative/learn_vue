@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <div> {{ message }} </div>
+        <script>
+            new Vue({
+                data: {
+                    message: 'hello' // => 데이터 바인딩.
+                }
+            })
+        </script>
+
+        <div>
+            Hello <span v-if="show">Vue.js</span>
+        </div>
+        <script>
+            new Vue({
+                data: {
+                    show: false // => 디렉티브
+                }
+            })
+        </script>
+    </body>
+
+</html>
+
+<script>
+
+</script>
