@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-on:click="메소드 이름" -->
+        <button v-on:click="logText">click me</button>
+        <!-- <input type="text" v-on:keypress="logText"/> -->
+        <input type="text" v-on:keyup.enter="logText"/>
+        <!-- 엔터 시에만 작동하게끔 할 수도 있군 -->
+    </div>
+    
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            logText: function () {
+                console.log("gogo")
+            }
+        }
+    })
+</script>
