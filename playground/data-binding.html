@@ -10,8 +10,10 @@
     <div id="app">
         {{ str }}
 
-        <p>{{ num }}</p>
-        <p>{{ doubleNum }}</p>
+        <!-- 해당 ID를 바인딩. -->
+        <!-- <p id="asdf"> {{ num }} </p> 와 같다-->
+        <p v-bind:id="uuid"> {{ num }} </p>
+        <p> {{ doubleNum }} </p>
     </div>
 </body>
 </html>
@@ -24,8 +26,9 @@
             str: 'hi',
             num: 10,
             // doubleNum: 10 * 2
+            uuid: 'asdf'
         },
-        
+
         // 함수 정의
         computed: {
             doubleNum: function() {
