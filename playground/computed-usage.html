@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .warning {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- iserror 가 true일 때 warning들어가고 false일 땐 안들어감 -->
+    <p v-bind:class="{ warning: isError }">Hello</p>
+    <p v-bind:class="errorTextColor">Hello</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        // cname: 'blue-text',
+        isError: false
+      },
+      computed: {
+        // 앵간하면 탬플릿단보다 new vue 안에서 해결하는게 좋은듯.
+        errorTextColor: function () {
+          return this.isError ? 'warning' : null;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
