@@ -14,6 +14,20 @@
         <!-- <p id="asdf"> {{ num }} </p> 와 같다-->
         <p v-bind:id="uuid" v-bind:class="name"> {{ num }} </p>
         <p> {{ doubleNum }} </p>
+
+        <!-- 로딩창 만들기 if else-->
+        <div v-if="loading">
+            Loading..
+        </div>
+        <div v-else>
+            test user has been logged in
+        </div>
+
+        <!-- if else는 아예 없어지고.. show는 style display none 처리됨. -->
+        <div v-show="loading">
+            Loading..
+        </div>
+
     </div>
 </body>
 </html>
@@ -27,7 +41,8 @@
             num: 10,
             // doubleNum: 10 * 2
             uuid: 'asdf',
-            name: 'text-blue' 
+            name: 'text-blue',
+            loading: true   //로딩 중
         },
 
         // 함수 정의
