@@ -28,12 +28,17 @@
             Loading..
         </div>
 
+        <!-- Input box, 입력된값을 p태그에 출력 -->
+        <input type="text" v-model="message"/>
+        <p>{{message}}</p>
+
     </div>
 </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+// vuejs.org를 확인하기
     new Vue({
         el: '#app',
         data: {
@@ -42,7 +47,8 @@
             // doubleNum: 10 * 2
             uuid: 'asdf',
             name: 'text-blue',
-            loading: true   //로딩 중
+            loading: true,   //로딩 중
+            message: ''
         },
 
         // 함수 정의
