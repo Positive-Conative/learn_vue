@@ -3,9 +3,16 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+const App = {
+  template: '<div>hello</div>'
+}
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+  // ==
+  // components: {
+  //   'app': App
+  // }
+}).$mount('#app');
 
 
 
