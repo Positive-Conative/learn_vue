@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:myData="str+'반가워요'"></app-header>
     {{ str }}
   </div>
 </template>
