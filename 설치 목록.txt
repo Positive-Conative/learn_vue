@@ -1,0 +1,6 @@
+Vue.js devtools 사용
+
+vscode 확장 설치
+vetur
+night owl
+live server
