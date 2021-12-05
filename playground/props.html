@@ -12,6 +12,7 @@
     <div id="app">
         <!-- <app-header v-bind:props 속성 이름 = "상위 컴포넌트의 데이터 이름"></app-header> -->
         <app-header v-bind:propsdata="message"></app-header> 
+        <app-content v-bind:propsdata="num"></app-content>
     </div>
 </body>
 
@@ -25,14 +26,21 @@
         template: '<h1>{{ propsdata }}</h1>',
         props: ['propsdata']
     }
+    
+    let appContent = {
+        template: '<div>{{propsdata}}</div>',
+        props: ['propsdata']
+    }
 
     new Vue({
         el: '#app',
         components: {
-            'app-header': appHeader
+            'app-header' : appHeader,
+            'app-content': appContent
         },
         data: {
-            message: 'hi'
+            message: 'hi',
+            num: 10
         }
     })
 </script>
