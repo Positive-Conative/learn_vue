@@ -10,11 +10,15 @@
 
 <body>
     <div id="app">
-        
         <app-header></app-header>
         <app-content></app-content>
         <app-footer></app-footer>
+    </div>
 
+    <div id="app2">
+        <app-header></app-header>
+        <!-- <app-content></app-content> 알 수 없음. -->
+        <app-footer></app-footer>
     </div>
 </body>
 
@@ -48,4 +52,8 @@
             //...
         }
     });
+
+    new Vue({
+        el: '#app2'
+    })
 </script>
