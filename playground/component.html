@@ -10,9 +10,12 @@
 
 <body>
     <div id="app">
+        
         <app-header></app-header>
         <app-content></app-content>
         <app-content></app-content>
+
+        <my-header></my-header>
     </div>
 </body>
 
@@ -34,6 +37,12 @@
     });
 
     new Vue({
-        el: '#app'
+        el: '#app',
+        components: {
+            // '컴포넌트 이름': '컴포넌트 내용'
+            'my-header': {
+                template: '<h1>My Header</h1>'
+            }
+        }
     });
 </script>
