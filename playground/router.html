@@ -10,7 +10,12 @@
 
 <body>
     <div id="app">
+        <div>
+            <router-link to="/login"> Login </router-link>
+            <router-link to="/main"> Main </router-link>
+        </div>
 
+        <router-view></router-view>
     </div>
 </body>
 
@@ -20,13 +25,34 @@
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
 <script>
-    const myRouter = new VueRouter({
+    // URL : /login
+    const LoginComponent = {    
+        template: '<div>Login~</div>'
+    }
 
+    // URL : /main
+    const MainComponent = {
+        template: '<div>Main page</div>'
+    }
+
+    const myRouter = new VueRouter({
+        // 페이지의 라우팅 정보 들어감. --> 배열
+        routes: [
+            {   // Login page
+                path: '/login', // 페이지 URL 이름
+                component: LoginComponent // 해당 URL에서 표시될 컴포넌트
+            },
+            
+            {   // Main page
+                path: '/main',
+                component: MainComponent
+            }
+        ]
     });
 
 
     new Vue({
         el: '#app',
-        router: myRouter
+        router: myRouter    //Routerview 인식불가 에러면 이거 안쓴거임
     });
 </script>
