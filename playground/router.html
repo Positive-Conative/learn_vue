@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- https://joshua1988.github.io/web-development/vuejs/vue-router-navigation-guards/ -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +36,7 @@
     }
 
     const myRouter = new VueRouter({
+        mode: 'history', // -> hash 값 삭제
         // 페이지의 라우팅 정보 들어감. --> 배열
         routes: [
             {   // Login page
@@ -54,5 +55,6 @@
     new Vue({
         el: '#app',
         router: myRouter    //Routerview 인식불가 에러면 이거 안쓴거임
+        // components   //-> 여기는 S 붙음.
     });
 </script>
